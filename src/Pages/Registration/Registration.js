@@ -12,8 +12,9 @@ const Registration = () => {
 
     const handleSignUp = e => {
         e.preventDefault()
-        const { email, password, fname } = formState
-        if (!email || !password || !fname) return toast.error('Email/Password/Name is Missing!')
+
+        const { email, password, fname } = formState || {}
+        if (!formState || !email || !password || !fname) return toast.error('Email/Name/Password is Missing or Auto-Completed!')
 
         signUpWithEmailPassword(email, password)
             .then(result => {

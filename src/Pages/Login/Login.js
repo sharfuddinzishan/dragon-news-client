@@ -13,8 +13,9 @@ const Login = () => {
 
     const handleLogin = e => {
         e.preventDefault()
-        const { email, password } = formState
-        if (!email || !password) return toast.error('Email or Password is Missing!')
+
+        const { email, password } = formState || {}
+        if (!formState || !email || !password) return toast.error('Email or Password is Missing or Auto-Completed!')
 
         loginWithEmailPassword(email, password)
             .then(result => {
