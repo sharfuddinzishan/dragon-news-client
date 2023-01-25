@@ -47,17 +47,17 @@ const Registration = () => {
     return (
         <div>
             <Form onSubmit={handleSignUp}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="name">
                     <Form.Label>Your Name</Form.Label>
-                    <Form.Control type="text" id="name" name="fname" onBlur={e => setFormState({ ...formState, fname: e.target.value })} placeholder="Your Name" required />
+                    <Form.Control type="text" name="fname" onBlur={e => setFormState({ ...formState, fname: e.target.value })} placeholder="Your Name" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="email">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" id="email" name="email" onBlur={e => setFormState({ ...formState, email: e.target.value })} placeholder="Enter email" required />
+                    <Form.Control type="email" name="email" onBlur={e => setFormState({ ...formState, email: e.target.value })} placeholder="Enter email" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="password">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" id="password" name="password" onBlur={e => setFormState({ ...formState, password: e.target.value })} placeholder="Password" required />
+                    <Form.Control type="password" name="password" onBlur={e => setFormState({ ...formState, password: e.target.value })} placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" onClick={() => setTerms(!terms)} label={<>Accept <Link to='/terms'>Terms and Conditions?</Link></>} required />

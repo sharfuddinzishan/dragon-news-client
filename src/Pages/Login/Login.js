@@ -33,13 +33,13 @@ const Login = () => {
     return (
         <div>
             <Form onSubmit={handleLogin}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="email">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" id="email" name="email" onBlur={e => setFormState({ ...formState, email: e.target.value })} placeholder="Enter email" />
+                    <Form.Control type="email" name="email" onBlur={e => setFormState({ ...formState, email: e.target.value })} placeholder="Enter email" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3" controlId="password">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" id="password" name="password" onBlur={e => setFormState({ ...formState, password: e.target.value })} placeholder="Password" />
+                    <Form.Control type="password" name="password" onBlur={e => setFormState({ ...formState, password: e.target.value })} placeholder="Password" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Link className='text-secondary text-decoration-none' to='/registration'>Have No Account?</Link>
