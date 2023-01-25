@@ -1,9 +1,15 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import SingleNewsCard from '../Shared/SingleNewsCard/SingleNewsCard';
+
 
 const News = () => {
+    const getNews = useLoaderData()
     return (
         <div>
-            <h2>News</h2>
+            {
+                <SingleNewsCard news={getNews}></SingleNewsCard>
+            }
         </div>
     );
 };

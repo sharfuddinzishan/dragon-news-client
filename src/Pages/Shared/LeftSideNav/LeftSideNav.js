@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const LeftSideNav = () => {
     const [categories, setCategories] = useState()
     useEffect(() => {
-        axios.get('http://localhost:5000/categories')
+        axios.get('https://dragon-news-server-one-swart.vercel.app/categories')
             .then(result => {
                 setCategories(result.data)
             })
